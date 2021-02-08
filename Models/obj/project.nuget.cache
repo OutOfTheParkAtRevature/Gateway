@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tdyb37AJaxnP+upPm2uG+poHDKSrFR/zFZ8jGdwTr+BA4i7PRIl+vzLg+xcLT2MeF895FHKtMbn2M8qYHBg86A==",
+  "dgSpecHash": "HNCyHodkPn+KHy86Vfbi4YfRtS/4JGVbJFDfdAz/SuCaXrItxkuBaatX0rRA6GfsFzU7BeGMiaTl+VhNuLTcxw==",
   "success": true,
-  "projectFilePath": "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Models\\Model.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Revature\\P3\\Gateway\\Models\\Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Productive Account\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Productive Account\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Productive Account\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

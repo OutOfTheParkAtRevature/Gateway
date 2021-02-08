@@ -247,24 +247,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\theje\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Productive Account\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Gateway\\Gateway.csproj",
+      "projectUniqueName": "D:\\Revature\\P3\\Gateway\\Gateway\\Gateway.csproj",
       "projectName": "Gateway",
-      "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Gateway\\Gateway.csproj",
-      "packagesPath": "C:\\Users\\theje\\.nuget\\packages\\",
-      "outputPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Gateway\\obj\\",
+      "projectPath": "D:\\Revature\\P3\\Gateway\\Gateway\\Gateway.csproj",
+      "packagesPath": "C:\\Users\\Productive Account\\.nuget\\packages\\",
+      "outputPath": "D:\\Revature\\P3\\Gateway\\Gateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\theje\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Productive Account\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -277,11 +280,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Logic\\Service.csproj": {
-              "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Logic\\Service.csproj"
+            "D:\\Revature\\P3\\Gateway\\Logic\\Service.csproj": {
+              "projectPath": "D:\\Revature\\P3\\Gateway\\Logic\\Service.csproj"
             },
-            "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Models\\Model.csproj": {
-              "projectPath": "F:\\Visual Studio Projects\\P3_LeagueManager\\Gateway\\Models\\Model.csproj"
+            "D:\\Revature\\P3\\Gateway\\Models\\Model.csproj": {
+              "projectPath": "D:\\Revature\\P3\\Gateway\\Models\\Model.csproj"
             }
           }
         }
@@ -319,7 +322,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
