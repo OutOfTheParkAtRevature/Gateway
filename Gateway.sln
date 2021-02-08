@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Models\Model.cspro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repo", "Repo\Repo.csproj", "{C161C634-9611-45A8-920E-E883C1EFBF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repo.Tests", "Repo.Tests\Repo.Tests.csproj", "{E1524D46-6ABF-4334-9345-E0251256AE01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repo.Tests", "Repo.Tests\Repo.Tests.csproj", "{E1524D46-6ABF-4334-9345-E0251256AE01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Tests", "Service.Tests\Service.Tests.csproj", "{0235BE18-F518-49F9-A93B-E0B31213777D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Tests", "Service.Tests\Service.Tests.csproj", "{0235BE18-F518-49F9-A93B-E0B31213777D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model.Tests", "Model.Tests\Model.Tests.csproj", "{B8C6A788-7F56-40BD-A48A-556D9B57D68D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0235BE18-F518-49F9-A93B-E0B31213777D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0235BE18-F518-49F9-A93B-E0B31213777D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0235BE18-F518-49F9-A93B-E0B31213777D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C6A788-7F56-40BD-A48A-556D9B57D68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C6A788-7F56-40BD-A48A-556D9B57D68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C6A788-7F56-40BD-A48A-556D9B57D68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C6A788-7F56-40BD-A48A-556D9B57D68D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
