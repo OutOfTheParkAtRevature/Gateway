@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Model;
 
 namespace Gateway
 {
@@ -53,6 +55,13 @@ namespace Gateway
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            
+            Router router = new Router("routes.json");
+            app.Run(async (context) =>
+            {
+                var content = await router.RouteRequest(context.Request);
+                await context.Response.WriteAsync(await content.Content.ReadAsStringAsync());
             });
         }
     }
