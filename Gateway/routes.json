@@ -8,11 +8,11 @@
       }
     },
     {
-      "endpoint": "/songs",
-      "destination": {
-        "uri": "http://localhost:8091/songs/",
-        "requiresAuthentication": "false"
-      }
+      "endpoint": "/users",
+        "destination": {
+            "uri": "https://localhost:5001/api/users/",
+            "requiresAuthentication": "false"
+        }
     }
   ],
   "authenticationService": {

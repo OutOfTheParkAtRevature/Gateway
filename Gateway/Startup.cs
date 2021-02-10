@@ -61,6 +61,7 @@ namespace Gateway
             app.Run(async (context) =>
             {
                 var content = await router.RouteRequest(context.Request);
+
                 await context.Response.WriteAsync(await content.Content.ReadAsStringAsync());
             });
         }

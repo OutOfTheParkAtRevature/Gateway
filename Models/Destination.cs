@@ -53,17 +53,15 @@ namespace Model
             {
                 using (StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8))
                 {
-                    requestContent = readStream.ReadToEnd();
+                    requestContent = await readStream.ReadToEndAsync();
                 }
             }
 
             using (var newRequest = new HttpRequestMessage(new HttpMethod(request.Method), CreateDestinationUri(request)))
             {
                 newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
-                using (var response = await client.SendAsync(newRequest))
-                {
-                    return response;
-                }
+                var response = await client.SendAsync(newRequest);
+                return response;
             }
         }
 
