@@ -51,7 +51,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: user-service-deployment
+          serviceName: gateway-deployment
           servicePort: 80
         path: /gateway(/|$)(.*)
       
