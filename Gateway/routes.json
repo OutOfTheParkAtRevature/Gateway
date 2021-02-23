@@ -1,72 +1,133 @@
 {
-    "routes": [
-        {
-            "endpoint": "/calendars",
-            "destination": {
-                "uri": "http://localhost:5001/calendars/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/equipmentrequests",
-            "destination": {
-                "uri": "http://localhost:5001/equipmentrequests/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/leagues",
-            "destination": {
-                "uri": "http://localhost:5001/leagues/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/messages",
-            "destination": {
-                "uri": "http://localhost:5001/messages/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/news",
-            "destination": {
-                "uri": "http://localhost:5001/news/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/playbooks",
-            "destination": {
-                "uri": "http://localhost:5001/playbooks/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/seasons",
-            "destination": {
-                "uri": "http://localhost:5001/seasons/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/statistics",
-            "destination": {
-                "uri": "http://localhost:5001/statistics/",
-                "requiresAuthentication": "false"
-            }
-        },
-        {
-            "endpoint": "/users",
-            "destination": {
-                "uri": "https://localhost:5001/api/users/",
-                "requiresAuthentication": "false"
-            }
-        }
-    ],
-    "authenticationService": {
-        "uri": "http://localhost:8080/api/auth/"
+  "routes": [
+    {
+      "endpoint": "/Account",
+      "destination": {
+        "uri": "http://localhost:8090/api/Account/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/User",
+      "destination": {
+        "uri": "https://localhost:5001/api/User/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Calendar",
+      "destination": {
+        "uri": "https://localhost:5001/api/Calendar/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Equipment",
+      "destination": {
+        "uri": "https://localhost:5001/api/Equipment/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/League",
+      "destination": {
+        "uri": "https://localhost:5001/api/League/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Team",
+      "destination": {
+        "uri": "https://localhost:5001/api/Team/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Vendor",
+      "destination": {
+        "uri": "https://localhost:5001/api/Vendor/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Message",
+      "destination": {
+        "uri": "https://localhost:5001/api/Message/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/News",
+      "destination": {
+        "uri": "https://localhost:5001/api/News/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Playbook",
+      "destination": {
+        "uri": "https://localhost:5001/api/Playbook/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Game",
+      "destination": {
+        "uri": "https://localhost:5001/api/Game/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/Season",
+      "destination": {
+        "uri": "https://localhost:5001/api/Season/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/BaseballStatistics",
+      "destination": {
+        "uri": "https://localhost:5001/api/BaseballStatistics/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/BasketballStatistics",
+      "destination": {
+        "uri": "https://localhost:5001/api/BasketballStatistics/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/FootballStatistics",
+      "destination": {
+        "uri": "https://localhost:5001/api/FootballStatistics/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/GolfStatistics",
+      "destination": {
+        "uri": "https://localhost:5001/api/GolfStatistics/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/HockeyStatistics",
+      "destination": {
+        "uri": "https://localhost:5001/api/HockeyStatistics/",
+        "requiresAuthentication": "true"
+      }
+    },
+    {
+      "endpoint": "/SoccerStatistics",
+      "destination": {
+        "uri": "https://localhost:5001/api/SoccerStatistics/",
+        "requiresAuthentication": "true"
+      }
     }
-} 
-
-// Look into this authentication service
+  ],
+  "authenticationService": {
+    "uri": "http://localhost:8080/api/Account/"
+  }
+}
