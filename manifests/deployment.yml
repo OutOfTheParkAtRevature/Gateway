@@ -24,3 +24,34 @@ spec:
           ports:
             - containerPort: 80
               name: gateway-http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway-deployment
+spec:
+  ports:
+    - name: gateway
+      port: 80
+      targetPort: gateway-http
+  selector:
+    app: gateway
+  type: LoadBalancer
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - host: gateway.1c50b018f5784721b39b.eastus.aksapp.io
+    http:
+      paths:
+      - backend:
+          serviceName: user-service-deployment
+          servicePort: 80
+        path: /gateway(/|$)(.*)
+      
