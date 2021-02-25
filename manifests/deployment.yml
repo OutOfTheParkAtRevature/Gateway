@@ -142,21 +142,18 @@ kind: Ingress
 metadata:
   name: gateway-ingress
   annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    kubernetes.io/ingress.global-static-ip-name: dev-pip-usw-qa-aks
-    kubernetes.io/ingress.class: addon-http-application-routing
+    
 spec:
   rules:
   - host: gateway.1c50b018f5784721b39b.eastus.aksapp.io
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: gateway-deployment
-          servicePort: http
-        backend:
-          serviceName: gateway-deployment
-          servicePort: https
+          servicePort: 443
+        path: /gateway(/|$)(.*)
       
