@@ -64,11 +64,11 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-    - http:
-      - path: /
-        backend:
-          serviceName: gateway-deployment
-          servicePort: 443
+    http:
+    - path: /
+      backend:
+        serviceName: gateway-deployment
+        servicePort: 443
 #    - https:
 #        paths:
 #        - path: /
