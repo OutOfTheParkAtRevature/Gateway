@@ -65,7 +65,6 @@ metadata:
 spec:
   rules:
     - http:
-      paths:
       - path: /
         backend:
           serviceName: gateway-deployment
@@ -76,5 +75,3 @@ spec:
 #          backend:
 #            serviceName: gateway-deployment
 #            servicePort: 443
-        
-      
