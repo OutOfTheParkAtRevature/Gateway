@@ -1,128 +1,128 @@
 {
   "routes": [
     {
-      "endpoint": "/Account/",
+      "endpoint": "/Account",
       "destination": {
-        "uri": "http://20.62.210.88:80/api",
+        "uri": "http://20.62.210.88:80/api/Account/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/User/",
+      "endpoint": "/User",
       "destination": {
-        "uri": "http://20.62.210.88:80/api",
+        "uri": "http://20.62.210.88:80/api/User/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Calendar/",
+      "endpoint": "/Calendar",
       "destination": {
-        "uri": "http://20.185.102.169:80/api",
+        "uri": "http://20.185.102.169:80/api/Calendar/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Equipment/",
+      "endpoint": "/Equipment",
       "destination": {
-        "uri": "http://40.88.226.19:80/api",
+        "uri": "http://40.88.226.19:80/api/Equipment/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/League/",
+      "endpoint": "/League",
       "destination": {
-        "uri": "http://20.62.247.144:80/api",
+        "uri": "http://20.62.247.144:80/api/League/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Team/",
+      "endpoint": "/Team",
       "destination": {
-        "uri": "http://20.62.247.144:80/api",
+        "uri": "http://20.62.247.144:80/api/Team/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Vendor/",
+      "endpoint": "/Vendor",
       "destination": {
-        "uri": "http://20.62.247.144:80/api",
+        "uri": "http://20.62.247.144:80/api/Vendor/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Message/",
+      "endpoint": "/Message",
       "destination": {
-        "uri": "http://20.185.100.57:80/api",
+        "uri": "http://20.185.100.57:80/api/Message/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/News/",
+      "endpoint": "/News",
       "destination": {
-        "uri": "http://52.191.84.109:80/api",
+        "uri": "http://52.191.84.109:80/api/News/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Playbook/",
+      "endpoint": "/Playbook",
       "destination": {
-        "uri": "http://52.152.192.39:80/api",
+        "uri": "http://52.152.192.39:80/api/Playbook/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Game/",
+      "endpoint": "/Game",
       "destination": {
-        "uri": "http://40.88.224.69:80/api",
+        "uri": "http://40.88.224.69:80/api/Game/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/Season/",
+      "endpoint": "/Season",
       "destination": {
-        "uri": "http://40.88.224.69:80/api",
+        "uri": "http://40.88.224.69:80/api/Season/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/BaseballStatistics/",
+      "endpoint": "/BaseballStatistics",
       "destination": {
-        "uri": "http://52.149.247.215:80/api",
+        "uri": "http://52.149.247.215:80/api/BaseballStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/BasketballStatistics/",
+      "endpoint": "/BasketballStatistics",
       "destination": {
-        "uri": "http://52.149.247.215:80/api",
+        "uri": "http://52.149.247.215:80/api/BasketballStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/FootballStatistics/",
+      "endpoint": "/FootballStatistics",
       "destination": {
-        "uri": "http://52.149.247.215:80/api",
+        "uri": "http://52.149.247.215:80/api/FootballStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/GolfStatistics/",
+      "endpoint": "/GolfStatistics",
       "destination": {
-        "uri": "http://52.149.247.215:80/api",
+        "uri": "http://52.149.247.215:80/api/GolfStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/HockeyStatistics/",
+      "endpoint": "/HockeyStatistics",
       "destination": {
-        "uri": "http://52.149.247.215:80/api",
+        "uri": "http://52.149.247.215:80/api/HockeyStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
-      "endpoint": "/SoccerStatistics/",
+      "endpoint": "/SoccerStatistics",
       "destination": {
-        "uri": "http://52.149.247.215:80/api",
+        "uri": "http://52.149.247.215:80/api/SoccerStatistics/",
         "requiresAuthentication": "true"
       }
     }
