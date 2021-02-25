@@ -10,8 +10,8 @@
     {
       "endpoint": "/User",
       "destination": {
-        "uri": "http://40.76.159.244/pi/User/",
-        "requiresAuthentication": "false"
+        "uri": "http://40.76.159.244/api/User/",
+        "requiresAuthentication": "true"
       }
     },
     {
