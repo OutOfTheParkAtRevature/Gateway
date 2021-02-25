@@ -68,7 +68,7 @@ spec:
     - path: /
       backend:
         serviceName: gateway-deployment
-        servicePort: 443
+        servicePort: https
 #    - https:
 #        paths:
 #        - path: /
