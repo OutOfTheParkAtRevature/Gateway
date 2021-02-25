@@ -132,8 +132,8 @@ spec:
     - name: https
       protocol: TCP
       port: 443
-      targetPort: gateway-https
-      nodePort: 31561
+      targetPort: https
+      nodePort: 31562
 
   selector:
     app: gateway
