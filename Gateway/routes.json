@@ -24,7 +24,7 @@
     {
       "endpoint": "/Equipment",
       "destination": {
-        "uri": "http://52.151.218.255:80/api/Equipment/",
+        "uri": "http://52.151.218.255/api/Equipment/",
         "requiresAuthentication": "false"
       }
     },
