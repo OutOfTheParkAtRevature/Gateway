@@ -71,4 +71,3 @@ spec:
         backend:
           serviceName: gateway-deployment
           servicePort: 443
-        path: /gateway(/|$)(.*)
