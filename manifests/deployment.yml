@@ -24,6 +24,8 @@ spec:
           ports:
             - containerPort: 80
               name: gateway-http
+            - containerPort: 443
+              name: gateway-https
 ---
 apiVersion: v1
 kind: Secret
@@ -130,7 +132,7 @@ spec:
     - name: https
       protocol: TCP
       port: 443
-      targetPort: https
+      targetPort: gateway-https
       nodePort: 31561
 
   selector:
