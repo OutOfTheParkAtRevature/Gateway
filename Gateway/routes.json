@@ -3,14 +3,14 @@
     {
       "endpoint": "/Account",
       "destination": {
-        "uri": "http://40.76.159.244:80/api/Account/",
-        "requiresAuthentication": "false"
+        "uri": "http://40.76.159.244/api/Account/",
+        "requiresAuthentication": "false",
       }
     },
     {
       "endpoint": "/Account/login",
       "destination": {
-        "uri": "http://40.76.159.244:80/api/Account/login/",
+        "uri": "http://40.76.159.244/api/Account/login/",
         "requiresAuthentication": "true"
       }
     },
@@ -31,7 +31,7 @@
     {
       "endpoint": "/Equipment",
       "destination": {
-        "uri": "http://40.88.226.19:80/api/Equipment/",
+        "uri": "http://52.151.218.255/api/Equipment/",
         "requiresAuthentication": "true"
       }
     },
@@ -135,6 +135,6 @@
     }
   ],
   "authenticationService": {
-    "uri": "http://20.62.210.88:80/api/Account/"
+    "uri": "http://40.76.159.244/api/Account/"
   }
 }
