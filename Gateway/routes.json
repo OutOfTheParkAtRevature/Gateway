@@ -8,13 +8,6 @@
       }
     },
     {
-      "endpoint": "/Account/login",
-      "destination": {
-        "uri": "http://40.76.159.244:80/api/Account/login/",
-        "requiresAuthentication": "true"
-      }
-    },
-    {
       "endpoint": "/User",
       "destination": {
         "uri": "http://40.76.159.244:80/api/User/",
