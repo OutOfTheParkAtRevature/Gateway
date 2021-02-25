@@ -67,7 +67,7 @@ namespace Model
                     if (isTokenBased)
                     {
                         string token = request.Headers["Authorization"];
-                        client.DefaultRequestHeaders.Add("Authoriozation", token);
+                        client.DefaultRequestHeaders.Add("Authorization", token);
                     }
                 }
                 return await client.SendAsync(newRequest); 
