@@ -3,127 +3,127 @@
     {
       "endpoint": "/Account",
       "destination": {
-        "uri": "http://40.76.159.244/api/Account/",
-        "requiresAuthentication": "false",
+        "uri": "http://40.76.159.244:80/api/Account/",
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/User",
       "destination": {
         "uri": "http://40.76.159.244:80/api/User/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Calendar",
       "destination": {
         "uri": "http://20.185.102.169:80/api/Calendar/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Equipment",
       "destination": {
         "uri": "http://52.151.218.255/api/Equipment/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/League",
       "destination": {
         "uri": "http://20.62.247.144:80/api/League/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Team",
       "destination": {
         "uri": "http://20.62.247.144:80/api/Team/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Vendor",
       "destination": {
         "uri": "http://20.62.247.144:80/api/Vendor/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Message",
       "destination": {
         "uri": "http://20.185.100.57:80/api/Message/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/News",
       "destination": {
         "uri": "http://52.191.84.109:80/api/News/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Playbook",
       "destination": {
         "uri": "http://52.152.192.39:80/api/Playbook/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Game",
       "destination": {
         "uri": "http://40.88.224.69:80/api/Game/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Season",
       "destination": {
         "uri": "http://40.88.224.69:80/api/Season/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/BaseballStatistics",
       "destination": {
         "uri": "http://52.149.247.215:80/api/BaseballStatistics/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/BasketballStatistics",
       "destination": {
         "uri": "http://52.149.247.215:80/api/BasketballStatistics/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/FootballStatistics",
       "destination": {
         "uri": "http://52.149.247.215:80/api/FootballStatistics/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/GolfStatistics",
       "destination": {
         "uri": "http://52.149.247.215:80/api/GolfStatistics/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/HockeyStatistics",
       "destination": {
         "uri": "http://52.149.247.215:80/api/HockeyStatistics/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/SoccerStatistics",
       "destination": {
         "uri": "http://52.149.247.215:80/api/SoccerStatistics/",
-        "requiresAuthentication": "true"
+        "requiresAuthentication": "false"
       }
     }
   ],
