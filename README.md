@@ -20,14 +20,15 @@ This project facilitates communication between the frontend and all of the other
 ## Links
 This Repository is part of an application designed with a Microservice Architecture. The other parts of the application are listed below
 
-* Frontend: https://github.com/OutOfTheParkAtRevature/Frontend
-* League Service: https://github.com/OutOfTheParkAtRevature/LeagueService
-* Stat Service: https://github.com/OutOfTheParkAtRevature/StatService
-* Playbook Service: https://github.com/OutOfTheParkAtRevature/PlaybookService 
-* Equipment Service: https://github.com/OutOfTheParkAtRevature/EquipmentService 
 * Calendar Service: https://github.com/OutOfTheParkAtRevature/CalendarService
+* Equipment Service: https://github.com/OutOfTheParkAtRevature/EquipmentService
+* Frontend: https://github.com/OutOfTheParkAtRevature/Frontend
+* Gateway Service: https://github.com/OutOfTheParkAtRevature/Gateway
+* League Service: https://github.com/OutOfTheParkAtRevature/LeagueService.git
 * Message Service: https://github.com/OutOfTheParkAtRevature/MessageService
-* User Service: https://github.com/OutOfTheParkAtRevature/UserService
 * News Service: https://github.com/OutOfTheParkAtRevature/NewsService
-* Season Service: https://github.com/OutOfTheParkAtRevature/SeasonService
 * Notification Service: https://github.com/OutOfTheParkAtRevature/NotificationService
+* Playbook Service: https://github.com/OutOfTheParkAtRevature/PlaybookService
+* Season Service: https://github.com/OutOfTheParkAtRevature/SeasonService
+* Stat Service: https://github.com/OutOfTheParkAtRevature/StatService
+* User Service: https://github.com/OutOfTheParkAtRevature/UserService
