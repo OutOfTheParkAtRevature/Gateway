@@ -31,7 +31,7 @@
     {
       "endpoint": "/League",
       "destination": {
-        "uri": "http://20.62.247.144:80/api/League/",
+        "uri": "http://10.0.143.22/api/League/",
         "requiresAuthentication": "false"
       }
     },
