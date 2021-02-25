@@ -11,7 +11,7 @@
       "endpoint": "/User",
       "destination": {
         "uri": "http://40.76.159.244:80/api/User/",
-        "requiresAuthentication": "false"
+        "requiresAuthentication": "true"
       }
     },
     {
@@ -24,7 +24,7 @@
     {
       "endpoint": "/Equipment",
       "destination": {
-        "uri": "http://52.151.218.255/api/Equipment/",
+        "uri": "http://52.151.218.255:80/api/Equipment/",
         "requiresAuthentication": "false"
       }
     },

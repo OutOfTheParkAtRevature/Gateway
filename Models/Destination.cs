@@ -46,7 +46,7 @@ namespace Model
             return Uri + endpoint + queryString;
         }
 
-        public async Task<HttpResponseMessage> SendRequest(HttpRequest request)
+        public async Task<HttpResponseMessage> SendRequest(HttpRequest request, bool isTokenBased)
         {
             string requestContent;
             using (Stream receiveStream = request.Body)
@@ -57,11 +57,20 @@ namespace Model
                 }
             }
 
+            HttpClientHandler handler = new HttpClientHandler();
+
             using (var newRequest = new HttpRequestMessage(new HttpMethod(request.Method), CreateDestinationUri(request)))
             {
                 newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
-                var response = await client.SendAsync(newRequest);
-                return response;
+                using (var client = new HttpClient(handler))
+                {
+                    if (isTokenBased)
+                    {
+                        string token = request.Headers["Authorization"];
+                        client.DefaultRequestHeaders.Add("Authoriozation", token);
+                    }
+                }
+                return await client.SendAsync(newRequest); 
             }
         }
 
