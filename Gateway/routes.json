@@ -3,14 +3,14 @@
     {
       "endpoint": "/Account",
       "destination": {
-        "uri": "http://20.62.210.88:80/api/Account/",
+        "uri": "http://40.76.159.244:80/api/Account/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/User",
       "destination": {
-        "uri": "http://20.62.210.88:80/api/User/",
+        "uri": "http://40.76.159.244:80/api/User/",
         "requiresAuthentication": "true"
       }
     },
