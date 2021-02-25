@@ -51,6 +51,21 @@ stages:
           - task: SonarCloudPublish@1
             displayName: Publish Code Analysis
 
+          - task: DotNetCoreCLI@2
+            displayName: 'dotnet publish and zip'
+            inputs:
+              command: 'publish'
+              publishWebProjects: true
+              zipAfterPublish: true
+          
+          - task: AzureRmWebAppDeployment@4
+            inputs:
+              ConnectionType: 'AzureRM'
+              azureSubscription: 'out-of-the-park-rg Connection'
+              appType: 'webApp'
+              WebAppName: 'OutOfTheParkGateway'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
   - stage: 'Build'
     displayName: Build and push
     jobs:
