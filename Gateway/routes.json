@@ -3,21 +3,21 @@
     {
       "endpoint": "/Account",
       "destination": {
-        "uri": "https://10.0.107.91/api/Account/",
+        "uri": "https://10.0.48.38/api/Account/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/User",
       "destination": {
-        "uri": "https://10.0.107.91/api/User/",
+        "uri": "https://10.0.48.38/api/User/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/Calendar",
       "destination": {
-        "uri": "https://10.0.179.34/api/Calendar/",
+        "uri": "https://10.0.159.202/api/Calendar/",
         "requiresAuthentication": "false"
       }
     },
@@ -128,6 +128,6 @@
     }
   ],
   "authenticationService": {
-    "uri": "https://10.0.107.91/api/Account/"
+    "uri": "https://10.0.48.38/api/Account/"
   }
 }
