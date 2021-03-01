@@ -104,7 +104,7 @@ stages:
               inputs:
                 action: createSecret
                 secretName: $(imagePullSecret)
-                dockerRegistryEndpoint: 'Container Registry Connection'
+                dockerRegistryEndpoint: 'ACR'
                 kubernetesServiceConnection: 'kube3'
                 namespace: 'default'
 
