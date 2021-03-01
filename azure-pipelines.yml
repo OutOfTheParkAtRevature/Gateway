@@ -64,7 +64,7 @@ stages:
               buildContext: $(Build.Repository.LocalPath)
               repository: $(gatewayRepository)
               dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-              containerRegistry: 'Container Registry Connection'
+              containerRegistry: 'ACR'
               tags: |
                 $(tag)
           
