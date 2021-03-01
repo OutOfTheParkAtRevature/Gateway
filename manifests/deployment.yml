@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: outofthepark15226.azurecr.io/gateway
+          image: outoftheparkcluster.azurecr.io/gateway
           imagePullPolicy: Always
           ports:
             - containerPort: 80
@@ -28,15 +28,17 @@ spec:
             - containerPort: 443
               name: https
 ---
-apiVersion: v1
-kind: Secret
-metadata:
-   namespace: default
-   name: secret-tls
-type: kubernetes.io/tls
-data:
-  tls.crt: MIIDwzCCAqugAwIBAgIUIVyYnJh0jWQ8b/ANkTrabX76DCcwDQYJKoZIhvcNAQELBQAwcTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0Zsb3JpZGExEDAOBgNVBAcMB09ybGFuZG8xETAPBgNVBAoMCFJldmF0dXJlMRQwEgYDVQQLDAtOZXQxMjE0MjAyMDEVMBMGA1UEAwwMT3V0T2ZUaGVQYXJrMB4XDTIxMDIyNzE2NTg1NloXDTIyMDIyNzE2NTg1NlowcTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0Zsb3JpZGExEDAOBgNVBAcMB09ybGFuZG8xETAPBgNVBAoMCFJldmF0dXJlMRQwEgYDVQQLDAtOZXQxMjE0MjAyMDEVMBMGA1UEAwwMT3V0T2ZUaGVQYXJrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmBr4P9uYNUvQYKSM8QXUry7mvflK511wb+XMqkpUySe21R8Vl7va44gl4BdRrKT/zKPj0d5sZsXW/0FzEmnz90idhsam8tBq3BpqvJNDidSMJgRmRLSHK/ohvWwuUSXizWABQWct2o0nOvIQBW6w1AdpSkJEh1ArAXQB6IdQaDTXudi8TJ0cCj0qpiBbJaLhGX1rZjOdgWQ1dFWWr8q539PA8mGULryYOQFrCj0W1MyYsxsgMvKaCD/4BGn8nX8yJ+NJk3SN4ld6Wmkv0Nr8zfVXgmXfI7awMH4oKZw5p3mSTWi9Xis9vzRl0y1gZ8+KS27quB/0QdFN7Fa4cDuhTwIDAQABo1MwUTAdBgNVHQ4EFgQUmd6SCBvk3bt0pXE6+5AJG6bsxEgwHwYDVR0jBBgwFoAUmd6SCBvk3bt0pXE6+5AJG6bsxEgwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAdGkjQsOmFwB1obwRrigXss5k8rVFI4+mCEfJQuInjvReUlkzIMq4O10ssDO8ZHg40yCJMcWsRA5E5OCWsf3aS6VM3Phwdl7J28xp0Kz+lFBBOmgq6PXwg3Zy+ou0XCT7yah15zsmYrxDjEucUqQqq40/pB5G65J5+SDyYSIotRIBXtM9F2GMPbOXDS7MNUhr1oCOXLCMc1JBIOtDBnFZSHvq6hho6+iqGYX113eqH6daCK1GjezBeG1dwXe0ZGIr+D6a2hCWnJemSXhKAC9n1duB50l/MVrPMpjYlHbsq7Ohm5FmGp7N9YbGJl1K6HHEZkvgZJO8ZsAzJpGeawuQww==
-  tls.key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYGvg/25g1S9BgpIzxBdSvLua9+UrnXXBv5cyqSlTJJ7bVHxWXu9rjiCXgF1GspP/Mo+PR3mxmxdb/QXMSafP3SJ2Gxqby0GrcGmq8k0OJ1IwmBGZEtIcr+iG9bC5RJeLNYAFBZy3ajSc68hAFbrDUB2lKQkSHUCsBdAHoh1BoNNe52LxMnRwKPSqmIFslouEZfWtmM52BZDV0VZavyrnf08DyYZQuvJg5AWsKPRbUzJizGyAy8poIP/gEafydfzIn40mTdI3iV3paaS/Q2vzN9VeCZd8jtrAwfigpnDmneZJNaL1eKz2/NGXTLWBnz4pLbuq4H/RB0U3sVrhwO6FPAgMBAAECggEAfu/6/yffBZNoqk6JBNgt36kPjblPRniXTfsEa5Uu3tTS41dWqNNwX/SOT06GrcLha0HW7Z1m7/npbAqN4u8jV9p1BDYiu38tvtQZAZkQgyUrdMq1Il9ac1wC7lcq7DPm7ChTw+Y8wSiNdcbvkekHj1tEBmH5WMeRrFvI/+p1MxClHKJKz3XqifFDiQEkasTNWix794dgujVYFlEP4a//DAWPM77DGfSQ8ajx1UL09YqMqsqRiqUl15LLqe0TivZpiq/GDbPfJ/Lw1Xh8PL50aewoNobSS/Og9eoGxW8gubRomiv0vuSNLYQwint5ROdFzv5GuPLypJd7HfmUpmL9eQKBgQDG484kCmk7uPyVqSqHnicgOhvTVtBLlrz2JYnzAdzdPr8PV4BHSOUaoAMY/fVL0tc+FeLHOnDLG8goN46jMWFVJgCfAJuQ1XA6H6791fVo5W22UgT1rd+sgm04XjHmzh1l8aEn/o9CQjE5U4vo6CxKtdJ/B/o6iNTGXJ+WTv4KfQKBgQDDyBTsRLoPzuMaH7huwAZgKSBASvKqFDoJVihPompO3/7fFe4xEV+iE+YoFIFfo9sVxh5kQ6IgRTmAYnKZLXYdchphreXG2Ck7DPezXLSfM3XDTGuZSA3NU1ALAYA/RUW2xv4TheG7wYfyDECJMcbf03OgEFFoTL7NXLO/C3tYuwKBgF94jMRqJvefJcglix/MgBWNLzw0iQov0ocJn/2BYGbnrskLhK0zRZ6RPstpZK1ACUhpMxHVcL1emacMfDDEDGfWNSgeH47XleagvNxmL0ZqE08Ycf8ItrzVYt5TAPs854m/Ak/zdwskQQK2owtrH4/BVcjaqHgepJyPa5+4TWP1AoGBAJIetcb1MGz1+zeXLx6xgNCqQSDbDyvzNrGbNTDiRjeiJGY5xvGmRtr/wQpu63QHJk+k8y/f7pPpNpZkY6WBcaNecuQuVs1GrdcdwY2Dhmc/kAf39GKNjYeOQ7JDJ4WRXQuijyThCm4Ibj8v98ateQG6npR7OVb/2HQLWTggCKpbAoGAJ8gNkijA7D7F+R7BF68TRkUnL0j/ltrYLFa4ipLRMeiHUFn46mhjkkUcMlFDDM6Bo0nPBC4guOmMcsUQQr2N+DH2drjkYCmTYLbYKrMB77dGUkOmWyk5rwK1OBfsdyAF9aNCsnT6FTLQ7I29+PNUy1sGk5h5ygYYuw+hilpKOdI=
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#   namespace: default
+#   name: secret-tls
+#type: kubernetes.io/tls
+#data:
+#  tls.crt: |
+#      MIIDwzCCAqugAwIBAgIUIVyYnJh0jWQ8b/ANkTrabX76DCcwDQYJKoZIhvcNAQELBQAwcTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0Zsb3JpZGExEDAOBgNVBAcMB09ybGFuZG8xETAPBgNVBAoMCFJldmF0dXJlMRQwEgYDVQQLDAtOZXQxMjE0MjAyMDEVMBMGA1UEAwwMT3V0T2ZUaGVQYXJrMB4XDTIxMDIyNzE2NTg1NloXDTIyMDIyNzE2NTg1NlowcTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0Zsb3JpZGExEDAOBgNVBAcMB09ybGFuZG8xETAPBgNVBAoMCFJldmF0dXJlMRQwEgYDVQQLDAtOZXQxMjE0MjAyMDEVMBMGA1UEAwwMT3V0T2ZUaGVQYXJrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmBr4P9uYNUvQYKSM8QXUry7mvflK511wb+XMqkpUySe21R8Vl7va44gl4BdRrKT/zKPj0d5sZsXW/0FzEmnz90idhsam8tBq3BpqvJNDidSMJgRmRLSHK/ohvWwuUSXizWABQWct2o0nOvIQBW6w1AdpSkJEh1ArAXQB6IdQaDTXudi8TJ0cCj0qpiBbJaLhGX1rZjOdgWQ1dFWWr8q539PA8mGULryYOQFrCj0W1MyYsxsgMvKaCD/4BGn8nX8yJ+NJk3SN4ld6Wmkv0Nr8zfVXgmXfI7awMH4oKZw5p3mSTWi9Xis9vzRl0y1gZ8+KS27quB/0QdFN7Fa4cDuhTwIDAQABo1MwUTAdBgNVHQ4EFgQUmd6SCBvk3bt0pXE6+5AJG6bsxEgwHwYDVR0jBBgwFoAUmd6SCBvk3bt0pXE6+5AJG6bsxEgwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAdGkjQsOmFwB1obwRrigXss5k8rVFI4+mCEfJQuInjvReUlkzIMq4O10ssDO8ZHg40yCJMcWsRA5E5OCWsf3aS6VM3Phwdl7J28xp0Kz+lFBBOmgq6PXwg3Zy+ou0XCT7yah15zsmYrxDjEucUqQqq40/pB5G65J5+SDyYSIotRIBXtM9F2GMPbOXDS7MNUhr1oCOXLCMc1JBIOtDBnFZSHvq6hho6+iqGYX113eqH6daCK1GjezBeG1dwXe0ZGIr+D6a2hCWnJemSXhKAC9n1duB50l/MVrPMpjYlHbsq7Ohm5FmGp7N9YbGJl1K6HHEZkvgZJO8ZsAzJpGeawuQww==
+#  tls.key: |
+#      MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYGvg/25g1S9BgpIzxBdSvLua9+UrnXXBv5cyqSlTJJ7bVHxWXu9rjiCXgF1GspP/Mo+PR3mxmxdb/QXMSafP3SJ2Gxqby0GrcGmq8k0OJ1IwmBGZEtIcr+iG9bC5RJeLNYAFBZy3ajSc68hAFbrDUB2lKQkSHUCsBdAHoh1BoNNe52LxMnRwKPSqmIFslouEZfWtmM52BZDV0VZavyrnf08DyYZQuvJg5AWsKPRbUzJizGyAy8poIP/gEafydfzIn40mTdI3iV3paaS/Q2vzN9VeCZd8jtrAwfigpnDmneZJNaL1eKz2/NGXTLWBnz4pLbuq4H/RB0U3sVrhwO6FPAgMBAAECggEAfu/6/yffBZNoqk6JBNgt36kPjblPRniXTfsEa5Uu3tTS41dWqNNwX/SOT06GrcLha0HW7Z1m7/npbAqN4u8jV9p1BDYiu38tvtQZAZkQgyUrdMq1Il9ac1wC7lcq7DPm7ChTw+Y8wSiNdcbvkekHj1tEBmH5WMeRrFvI/+p1MxClHKJKz3XqifFDiQEkasTNWix794dgujVYFlEP4a//DAWPM77DGfSQ8ajx1UL09YqMqsqRiqUl15LLqe0TivZpiq/GDbPfJ/Lw1Xh8PL50aewoNobSS/Og9eoGxW8gubRomiv0vuSNLYQwint5ROdFzv5GuPLypJd7HfmUpmL9eQKBgQDG484kCmk7uPyVqSqHnicgOhvTVtBLlrz2JYnzAdzdPr8PV4BHSOUaoAMY/fVL0tc+FeLHOnDLG8goN46jMWFVJgCfAJuQ1XA6H6791fVo5W22UgT1rd+sgm04XjHmzh1l8aEn/o9CQjE5U4vo6CxKtdJ/B/o6iNTGXJ+WTv4KfQKBgQDDyBTsRLoPzuMaH7huwAZgKSBASvKqFDoJVihPompO3/7fFe4xEV+iE+YoFIFfo9sVxh5kQ6IgRTmAYnKZLXYdchphreXG2Ck7DPezXLSfM3XDTGuZSA3NU1ALAYA/RUW2xv4TheG7wYfyDECJMcbf03OgEFFoTL7NXLO/C3tYuwKBgF94jMRqJvefJcglix/MgBWNLzw0iQov0ocJn/2BYGbnrskLhK0zRZ6RPstpZK1ACUhpMxHVcL1emacMfDDEDGfWNSgeH47XleagvNxmL0ZqE08Ycf8ItrzVYt5TAPs854m/Ak/zdwskQQK2owtrH4/BVcjaqHgepJyPa5+4TWP1AoGBAJIetcb1MGz1+zeXLx6xgNCqQSDbDyvzNrGbNTDiRjeiJGY5xvGmRtr/wQpu63QHJk+k8y/f7pPpNpZkY6WBcaNecuQuVs1GrdcdwY2Dhmc/kAf39GKNjYeOQ7JDJ4WRXQuijyThCm4Ibj8v98ateQG6npR7OVb/2HQLWTggCKpbAoGAJ8gNkijA7D7F+R7BF68TRkUnL0j/ltrYLFa4ipLRMeiHUFn46mhjkkUcMlFDDM6Bo0nPBC4guOmMcsUQQr2N+DH2drjkYCmTYLbYKrMB77dGUkOmWyk5rwK1OBfsdyAF9aNCsnT6FTLQ7I29+PNUy1sGk5h5ygYYuw+hilpKOdI=
 ---
 apiVersion: v1
 kind: Service
@@ -55,16 +57,45 @@ spec:
       targetPort: 443
   selector:
     app: gateway
-  type: LoadBalancer
+  type: ClusterIP
 ---
-apiVersion: v1
-kind: ConfigMap
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
 metadata:
-  name: tcp-services
-  namespace: default
-data:
-  443: "default/gateway-deployment:443"
-  80: "default/gateway-deployment:80"
+  name: letsencrypt
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: noreplyootp@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
+          podTemplate:
+            spec:
+              nodeSelector:
+                "kubernetes.io/os": linux
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: tls-secret
+  namespace: ingress-basic
+spec:
+  secretName: tls-secret
+  dnsNames:
+  - outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
 ---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
@@ -73,17 +104,24 @@ metadata:
   namespace: default
   annotations:
     kubernetes.io/tls-acme: "true"
-    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   tls:
   - hosts: 
-    - gateway.1c50b018f5784721b39b.eastus.aksapp.io
-    secretName: secret-tls
+    - outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
+    secretName: tls-secret
   rules:
-  - host: gateway.1c50b018f5784721b39b.eastus.aksapp.io
+  - host: outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
     http:
       paths:
-      - path: /(/|$)(.*)
-        backend:
+      - backend:
+          serviceName: gateway-deployment
+          servicePort: 80
+        path: /(/|$)(.*)
+      - backend:
           serviceName: gateway-deployment
           servicePort: 443
+        path: /(/|$)(.*)
