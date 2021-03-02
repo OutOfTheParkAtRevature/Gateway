@@ -34,7 +34,7 @@ metadata:
   namespace: default
   name: gateway-deployment
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - name: http
       protocol: TCP
