@@ -88,12 +88,12 @@ spec:
   secretName: tls-secret
   dnsNames:
   - outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
-  acme:
-    config:
-    - http01:
-        ingressClass: nginx
-      domains:
-      - outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
+#  acme:
+#    config:
+#    - http01:
+#        ingressClass: nginx
+#      domains:
+#      - outoftheparkcluster-dns-e263abe0.hcp.southcentralus.azmk8s.io
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer
