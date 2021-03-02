@@ -38,7 +38,7 @@ namespace Gateway
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gateway", Version = "v1" });
             });
             
-            /* var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+            var identityUrl = Configuration.GetValue<string>("IdentityUrl");
             var jwtSettings = Configuration.GetSection("JwtSettings");
             services.AddAuthentication(opt =>
             {
@@ -56,7 +56,7 @@ namespace Gateway
                     ValidAudience = jwtSettings.GetSection("validAudience").Value,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("securityKey").Value))
                 };
-            });*/
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,8 +73,8 @@ namespace Gateway
 
             app.UseRouting();
 
-            //app.UseAuthentication();
-            //app.UseAuthorization();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
