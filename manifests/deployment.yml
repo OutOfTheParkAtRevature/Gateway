@@ -25,8 +25,8 @@ spec:
           ports:
             - containerPort: 80 
               name: http
-#            - containerPort: 443
-#              name: https
+            - containerPort: 443
+              name: https
 ---
 apiVersion: v1
 kind: Service
@@ -34,16 +34,16 @@ metadata:
   namespace: default
   name: gateway-deployment
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - name: http
       protocol: TCP
       port: 80
       targetPort: 80
-#    - name: https
-#      protocol: TCP
-#      port: 443
-#      targetPort: 443
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 443
   selector:
     app: gateway
 ---
