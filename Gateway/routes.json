@@ -3,14 +3,14 @@
     {
       "endpoint": "/Account",
       "destination": {
-        "uri": "https://10.0.167.177:443/api/Account/",
+        "uri": "http://10.0.167.177/api/Account/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/User",
       "destination": {
-        "uri": "https://10.0.167.177:443/api/User/",
+        "uri": "http://10.0.167.177/api/User/",
         "requiresAuthentication": "false"
       }
     },
