@@ -34,18 +34,20 @@ metadata:
   namespace: default
   name: gateway-deployment
 spec:
+  type: NodePort
   ports:
-#    - name: http
-#      protocol: TCP
-#      port: 80
-#      targetPort: 80
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30135
     - name: https
       protocol: TCP
       port: 443
       targetPort: 443
+      nodePort: 30136
   selector:
     app: gateway
-  type: ClusterIP
 ---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
@@ -70,14 +72,3 @@ spec:
           serviceName: gateway-deployment
           servicePort: 443
         path: /(/|$)(.*)
----
-apiVersion: networking.k8s.io/v1
-kind: IngressClass
-metadata:
-  name: external-lb
-  namespace: default
-spec:
-  controller: ingress-nginx-controller
-  parameters:
-    kind: IngressParameters
-    name: external-lb
