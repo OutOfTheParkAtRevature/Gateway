@@ -42,9 +42,15 @@ namespace Model
             if (destination.RequiresAuthentication)
             {
                 string token = request.Headers["Authorization"];
-                if (string.IsNullOrWhiteSpace(token)) return ConstructErrorMessage("Authentication failed.");
+                if (string.IsNullOrWhiteSpace(token))
+                {
+                    return ConstructErrorMessage("Authentication failed.");
+                }
                 HttpResponseMessage authResponse = await destination.SendRequest(request, destination.RequiresAuthentication);
-                if (!authResponse.IsSuccessStatusCode) return ConstructErrorMessage("Authentication failed.");
+                if (!authResponse.IsSuccessStatusCode)
+                {
+                    return ConstructErrorMessage("Authentication failed.");
+                }
             }
 
             return await destination.SendRequest(request, destination.RequiresAuthentication);
