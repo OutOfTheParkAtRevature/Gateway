@@ -23,7 +23,7 @@ spec:
           image: outoftheparkcluster.azurecr.io/gateway
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 80 
               name: http
             - containerPort: 443
               name: https
