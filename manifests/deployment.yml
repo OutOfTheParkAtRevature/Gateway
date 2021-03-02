@@ -126,4 +126,3 @@ spec:
           serviceName: gateway-deployment
           servicePort: 443
         path: /(/|$)(.*)
-  type: LoadBalancer
