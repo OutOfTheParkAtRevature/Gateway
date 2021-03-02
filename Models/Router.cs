@@ -38,10 +38,11 @@ namespace Model
             {
                 return ConstructErrorMessage("The path could not be found.");
             }
-
+            string token = request.Headers["Authorization"];
+            return ConstructErrorMessage("[Destination URI: " + destination.Uri + "][Auth Required: " + destination.RequiresAuthentication + "][Data Type: " + destination.RequiresAuthentication.GetType() + "][Token: " + token + "]");
             if (destination.RequiresAuthentication)
             {
-                string token = request.Headers["Authorization"];
+                //string token = request.Headers["Authorization"];
                 if (string.IsNullOrWhiteSpace(token))
                 {
                     return ConstructErrorMessage("Authentication failed.");
