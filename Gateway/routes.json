@@ -59,70 +59,70 @@
     {
       "endpoint": "/News",
       "destination": {
-        "uri": "http://10.0.176.77/api/News/",
+        "uri": "http://10.0.183.67/api/News/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/Playbook",
       "destination": {
-        "uri": "http://10.0.75.45/api/Playbook/",
+        "uri": "http://10.0.158.54/api/Playbook/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/Game",
       "destination": {
-        "uri": "http://10.0.37.234/api/Game/",
+        "uri": "http://10.0.231.178/api/Game/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/Season",
       "destination": {
-        "uri": "http://10.0.37.234/api/Season/",
+        "uri": "http://10.0.231.178/api/Season/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/BaseballStatistics",
       "destination": {
-        "uri": "http://10.0.210.124/api/BaseballStatistics/",
+        "uri": "http://10.0.131.170/api/BaseballStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/BasketballStatistics",
       "destination": {
-        "uri": "http://10.0.210.124/api/BasketballStatistics/",
+        "uri": "http://10.0.131.170/api/BasketballStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/FootballStatistics",
       "destination": {
-        "uri": "http://10.0.210.124/api/FootballStatistics/",
+        "uri": "http://10.0.131.170/api/FootballStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/GolfStatistics",
       "destination": {
-        "uri": "http://10.0.210.124/api/GolfStatistics/",
+        "uri": "http://10.0.131.170/api/GolfStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/HockeyStatistics",
       "destination": {
-        "uri": "http://10.0.210.124/api/HockeyStatistics/",
+        "uri": "http://10.0.131.170/api/HockeyStatistics/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/SoccerStatistics",
       "destination": {
-        "uri": "http://10.0.210.124/api/SoccerStatistics/",
+        "uri": "http://10.0.131.170/api/SoccerStatistics/",
         "requiresAuthentication": "true"
       }
     }
