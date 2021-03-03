@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,6 +16,8 @@ using Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 namespace Gateway
 {
@@ -37,17 +39,25 @@ namespace Gateway
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gateway", Version = "v1" });
             });
-            
+            services.AddOcelot();
+
             var identityUrl = Configuration.GetValue<string>("IdentityUrl");
             var jwtSettings = Configuration.GetSection("JwtSettings");
+
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy(JwtBearerDefaults.AuthenticationScheme, new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme‌​)
+                    .RequireAuthenticatedUser().Build());
+            });
+
             services.AddAuthentication(opt =>
             {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.RequireAuthenticatedSignIn = false;
             }).AddJwtBearer(options =>
             {
-                options.Authority = jwtSettings.GetSection("validIssuer").Value;
-                options.Audience = jwtSettings.GetSection("validAudience").Value;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
@@ -59,10 +69,18 @@ namespace Gateway
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("securityKey").Value))
                 };
             });
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public async void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -74,6 +92,7 @@ namespace Gateway
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -83,13 +102,14 @@ namespace Gateway
                 endpoints.MapControllers();
             });
             
-            Router router = new Router("routes.json");
-            app.Run(async (context) =>
-            {
-                var content = await router.RouteRequest(context.Request);
+            //Router router = new Router("routes.json");
+            //app.Run(async (context) =>
+            //{
+            //    var content = await router.RouteRequest(context.Request);
 
-                await context.Response.WriteAsync(await content.Content.ReadAsStringAsync());
-            });
+            //    await context.Response.WriteAsync(await content.Content.ReadAsStringAsync());
+            //});
+            await app.UseOcelot();
         }
     }
 }

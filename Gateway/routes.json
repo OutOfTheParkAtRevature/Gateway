@@ -128,6 +128,6 @@
     }
   ],
   "authenticationService": {
-    "uri": "http://10.0.167.177/api/Account/"
+    "uri": "http://20.188.75.184/api/Account/"
   }
 }
