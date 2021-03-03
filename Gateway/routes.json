@@ -3,14 +3,14 @@
     {
       "endpoint": "/Account",
       "destination": {
-        "uri": "http://10.0.167.177/api/Account/",
+        "uri": "http://20.188.75.184/api/Account/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/User",
       "destination": {
-        "uri": "https://10.0.167.177:443/api/User/",
+        "uri": "https://20.188.75.184/api/User/",
         "requiresAuthentication": "true"
       }
     },
@@ -31,14 +31,14 @@
     {
       "endpoint": "/League",
       "destination": {
-        "uri": "https://10.0.118.116:443/api/League/",
+        "uri": "https://52.153.243.104/api/League/",
         "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/Team",
       "destination": {
-        "uri": "https://10.0.118.116:443/api/Team/",
+        "uri": "https://52.153.243.104/api/Team/",
         "requiresAuthentication": "true"
       }
     },

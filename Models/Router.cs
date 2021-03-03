@@ -51,6 +51,7 @@ namespace Model
                 {
                     return ConstructErrorMessage("Authentication failed.");
                 }
+                return authResponse;
             }
 
             return await destination.SendRequest(request, destination.RequiresAuthentication);
