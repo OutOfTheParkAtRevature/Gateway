@@ -18,6 +18,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gateway
 {
